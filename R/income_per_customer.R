@@ -1,5 +1,7 @@
 #' 客户单产
 #'
+#' 根据指定的分组列，对数据进行分组，并计算每个分组的客户单产。
+#'
 #' @param data 数据框。
 #' @param periods 期数。
 #' @param income_col 收入列名。

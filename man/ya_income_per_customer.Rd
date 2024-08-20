@@ -21,5 +21,5 @@ ya_income_per_customer(data, periods, income_col, customer_id_col, ...)
 一个数据框，含分组列、客户单产。
 }
 \description{
-客户单产
+根据指定的分组列，对数据进行分组，并计算每个分组的客户单产。
 }
