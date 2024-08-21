@@ -15,7 +15,7 @@ ya_income_per_customer <- function(data, periods, income_col, customer_id_col, .
   group_cols <- enquos(...)
 
   result <- data %>%
-    group_by(!!!group_cols) %>%
+    group_by(...) %>%
     summarise(
       income_sum = sum({{ income_col }}, na.rm = TRUE),
       cust_amount = n_distinct({{ customer_id_col }}),
@@ -24,7 +24,7 @@ ya_income_per_customer <- function(data, periods, income_col, customer_id_col, .
     mutate(
       income_per_customer = .data$income_sum / .data$cust_amount / periods
       ) %>%
-    select(!!!group_cols, "income_per_customer")
+    select(..., "income_per_customer")
 
   return(result)
 }
