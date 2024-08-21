@@ -11,9 +11,8 @@
 #' @return 一个数据框，含分组列、客户单产。
 #'
 #' @export
-ya_income_per_customer <- function(data, periods, income_col, customer_id_col, ...) {
-  group_cols <- enquos(...)
-
+ya_income_per_customer <- function(
+    data, periods, income_col, customer_id_col, ...) {
   result <- data %>%
     group_by(...) %>%
     summarise(
@@ -23,7 +22,7 @@ ya_income_per_customer <- function(data, periods, income_col, customer_id_col, .
     ) %>%
     mutate(
       income_per_customer = .data$income_sum / .data$cust_amount / periods
-      ) %>%
+    ) %>%
     select(..., "income_per_customer")
 
   return(result)
