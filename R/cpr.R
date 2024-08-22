@@ -17,12 +17,10 @@ ya_cpr <- function(base_df, calculate_df, customer_id_col, product_col) {
   product_col <- ensym(product_col)
 
   tb_new_customer <- calculate_df %>%
-    select({{ customer_id_col }}) %>%
-    distinct() %>%
+    distinct({{ customer_id_col }}) %>%
     anti_join(
       base_df %>%
-        select({{ customer_id_col }}) %>%
-        distinct(),
+        distinct({{ customer_id_col }}),
       by = as_string(customer_id_col)
     ) %>%
     mutate(cpr = "C")
