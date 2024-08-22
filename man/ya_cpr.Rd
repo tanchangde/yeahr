@@ -16,7 +16,7 @@ ya_cpr(base_df, calculate_df, customer_id_col, product_col)
 \item{product_col}{产品列。}
 }
 \value{
-数据框,返回客户分类结果。
+数据框，返回客户分类结果。
 }
 \description{
 计算 CPR

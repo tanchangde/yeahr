@@ -9,7 +9,7 @@
 #' @param customer_id_col 客户区分列。
 #' @param product_col 产品列。
 #'
-#' @return  数据框,返回客户分类结果。
+#' @return  数据框，返回客户分类结果。
 #'
 #' @export
 ya_cpr <- function(base_df, calculate_df, customer_id_col, product_col) {
