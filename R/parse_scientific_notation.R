@@ -9,14 +9,7 @@
 #'
 #' @export
 ya_parse_sci_str <- function(x) {
-  result <- map_chr(x, ~ {
-    parsed_value <- suppressWarnings(as.numeric(.x))
-    if (is.na(parsed_value)) {
-      .x
-    } else {
-      as.character(parsed_value)
-    }
-  })
-
+  parsed_values <- suppressWarnings(as.numeric(x))
+  result <- ifelse(is.na(parsed_values), x, as.character(parsed_values))
   return(result)
 }
