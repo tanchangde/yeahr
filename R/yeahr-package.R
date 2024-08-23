@@ -12,6 +12,7 @@
 #' @importFrom dplyr select
 #' @importFrom dplyr summarise
 #' @importFrom magrittr %>%
+#' @importFrom purrr map_chr
 #' @importFrom rlang .data
 #' @importFrom rlang as_string
 #' @importFrom rlang enquo
