@@ -4,12 +4,14 @@
 #'
 #' 该函数用于根据客户和产品信息将客户分类为新客户、老客户新业务和老客户老业务。
 #'
-#' @param base_df 数据框。基期数据，如上年度数据。必需包含产品及客户 ID，如结算代码。
-#' @param calculate_df  数据框。需要计算客户数据，必需包含列同 `base_df`。
+#' @param base_df 数据框。基期数据，上年度有营收客户及产品清单。必需包含产品及客
+#'   户 ID，如结算代码。
+#' @param calculate_df  数据框。需要计算客户数据，必要列同 `base_df`，且需按必要
+#'   列分组求和。
 #' @param customer_id_col 客户区分列。
 #' @param product_col 产品列。
 #'
-#' @return  数据框，返回客户分类结果。
+#' @return  数据框，含 `customer_id_col`，`product_col` 及 CPR 计算结果。
 #'
 #' @export
 ya_cpr <- function(base_df, calculate_df, customer_id_col, product_col) {

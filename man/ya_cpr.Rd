@@ -7,16 +7,18 @@
 ya_cpr(base_df, calculate_df, customer_id_col, product_col)
 }
 \arguments{
-\item{base_df}{数据框。基期数据，如上年度数据。必需包含产品及客户 ID，如结算代码。}
+\item{base_df}{数据框。基期数据，上年度有营收客户及产品清单。必需包含产品及客
+户 ID，如结算代码。}
 
-\item{calculate_df}{数据框。需要计算客户数据，必需包含列同 \code{base_df}。}
+\item{calculate_df}{数据框。需要计算客户数据，必要列同 \code{base_df}，且需按必要
+列分组求和。}
 
 \item{customer_id_col}{客户区分列。}
 
 \item{product_col}{产品列。}
 }
 \value{
-数据框，返回客户分类结果。
+数据框，含 \code{customer_id_col}，\code{product_col} 及 CPR 计算结果。
 }
 \description{
 计算 CPR
