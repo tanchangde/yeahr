@@ -10,6 +10,10 @@
 #' @export
 ya_parse_sci_str <- function(x) {
   parsed_values <- suppressWarnings(as.numeric(x))
-  result <- ifelse(is.na(parsed_values), x, as.character(parsed_values))
+  result <- ifelse(
+    is.na(parsed_values),
+    x,
+    format(parsed_values, scientific = FALSE, trim = TRUE)
+  )
   return(result)
 }
