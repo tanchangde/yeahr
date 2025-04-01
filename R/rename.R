@@ -11,7 +11,7 @@
 #' @return 无返回值。
 #'
 #' @export
-yeahr_rename <- function(input_dir, output_dir, rename_vector) {
+ya_rename <- function(input_dir, output_dir, rename_vector) {
   if (!is.character(input_dir) || length(input_dir) != 1) {
     stop("`input_dir` must be a single string.")
   }
