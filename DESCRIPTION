@@ -8,13 +8,16 @@ Description: 本包集中管理日常分析用自定义函数.
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.3.1
+RoxygenNote: 7.3.2
 License: MIT + file LICENSE
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
 Imports: 
     dplyr,
+    fs,
     magrittr,
+    purrr,
     rlang,
+    stringr,
     tibble
